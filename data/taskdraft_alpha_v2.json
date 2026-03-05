@@ -1,0 +1,288 @@
+[
+  {
+    "id": "td_01",
+    "name": "The Resume Hacker",
+    "department": "Career",
+    "grades": {
+      "D": "Basic version: Reviews resume & suggests keywords.",
+      "C": "Improved: Reviews resume & suggests keywords. with some additional guidance.",
+      "B": "Advanced: Rewrites resume per ATS, drafts cover letter, formats to PDF. Provides detailed steps.",
+      "A": "Professional: Rewrites resume per ATS, drafts cover letter, formats to PDF. Includes automation elements.",
+      "S": "Rewrites resume per ATS, drafts cover letter, formats to PDF.",
+      "F": "Reviews resume & suggests keywords."
+    }
+  },
+  {
+    "id": "td_02",
+    "name": "The Tax-Writeoff Scraper",
+    "department": "Finance",
+    "grades": {
+      "D": "Basic version: Lists common 1099 deductions.",
+      "C": "Improved: Lists common 1099 deductions. with some additional guidance.",
+      "B": "Advanced: Ingests bank CSVs and auto-categorizes every hidden write-off. Provides detailed steps.",
+      "A": "Professional: Ingests bank CSVs and auto-categorizes every hidden write-off. Includes automation elements.",
+      "S": "Ingests bank CSVs and auto-categorizes every hidden write-off.",
+      "F": "Lists common 1099 deductions."
+    }
+  },
+  {
+    "id": "td_03",
+    "name": "The Refund Arbitrator",
+    "department": "Finance",
+    "grades": {
+      "D": "Basic version: Drafts a polite complaint email.",
+      "C": "Improved: Drafts a polite complaint email. with some additional guidance.",
+      "B": "Advanced: Cites exact corporate TOS policies and escalates legal phrasing for guaranteed refunds. Provides detailed steps.",
+      "A": "Professional: Cites exact corporate TOS policies and escalates legal phrasing for guaranteed refunds. Includes automation elements.",
+      "S": "Cites exact corporate TOS policies and escalates legal phrasing for guaranteed refunds.",
+      "F": "Drafts a polite complaint email."
+    }
+  },
+  {
+    "id": "td_04",
+    "name": "The Excel Sniper",
+    "department": "Ops",
+    "grades": {
+      "D": "Basic version: Tells you which formula to use.",
+      "C": "Improved: Tells you which formula to use. with some additional guidance.",
+      "B": "Advanced: Writes complete VBA macro scripts to automate the whole workbook. Provides detailed steps.",
+      "A": "Professional: Writes complete VBA macro scripts to automate the whole workbook. Includes automation elements.",
+      "S": "Writes complete VBA macro scripts to automate the whole workbook.",
+      "F": "Tells you which formula to use."
+    }
+  },
+  {
+    "id": "td_05",
+    "name": "The Thrift Flipper",
+    "department": "Creative",
+    "grades": {
+      "D": "Basic version: IDs item from photo & estimates MSRP.",
+      "C": "Improved: IDs item from photo & estimates MSRP. with some additional guidance.",
+      "B": "Advanced: Writes SEO title, description, and formats exact pricing strategy for Poshmark/eBay. Provides detailed steps.",
+      "A": "Professional: Writes SEO title, description, and formats exact pricing strategy for Poshmark/eBay. Includes automation elements.",
+      "S": "Writes SEO title, description, and formats exact pricing strategy for Poshmark/eBay.",
+      "F": "IDs item from photo & estimates MSRP."
+    }
+  },
+  {
+    "id": "td_06",
+    "name": "The Inbox Gatekeeper",
+    "department": "Ops",
+    "grades": {
+      "D": "Basic version: Summarizes long email threads.",
+      "C": "Improved: Summarizes long email threads. with some additional guidance.",
+      "B": "Advanced: Sorts 1,000 emails by urgency and drafts custom replies for the top 10. Provides detailed steps.",
+      "A": "Professional: Sorts 1,000 emails by urgency and drafts custom replies for the top 10. Includes automation elements.",
+      "S": "Sorts 1,000 emails by urgency and drafts custom replies for the top 10.",
+      "F": "Summarizes long email threads."
+    }
+  },
+  {
+    "id": "td_07",
+    "name": "The Meal-Prep Economist",
+    "department": "Ops",
+    "grades": {
+      "D": "Basic version: Suggests recipes based on a budget.",
+      "C": "Improved: Suggests recipes based on a budget. with some additional guidance.",
+      "B": "Advanced: Builds weekly macro-plan and generates exact Instacart grocery cart list. Provides detailed steps.",
+      "A": "Professional: Builds weekly macro-plan and generates exact Instacart grocery cart list. Includes automation elements.",
+      "S": "Builds weekly macro-plan and generates exact Instacart grocery cart list.",
+      "F": "Suggests recipes based on a budget."
+    }
+  },
+  {
+    "id": "td_08",
+    "name": "The Pitch Deck Architect",
+    "department": "Career",
+    "grades": {
+      "D": "Basic version: Outlines a 10-slide presentation structure.",
+      "C": "Improved: Outlines a 10-slide presentation structure. with some additional guidance.",
+      "B": "Advanced: Writes persuasive, slide-by-slide venture pitch copy with visual prompt cues. Provides detailed steps.",
+      "A": "Professional: Writes persuasive, slide-by-slide venture pitch copy with visual prompt cues. Includes automation elements.",
+      "S": "Writes persuasive, slide-by-slide venture pitch copy with visual prompt cues.",
+      "F": "Outlines a 10-slide presentation structure."
+    }
+  },
+  {
+    "id": "td_09",
+    "name": "The Bureaucracy Navigator",
+    "department": "Ops",
+    "grades": {
+      "D": "Basic version: Explains what a specific DMV/Visa form is.",
+      "C": "Improved: Explains what a specific DMV/Visa form is. with some additional guidance.",
+      "B": "Advanced: Provides step-by-step field filling guides and exact mailing protocols. Provides detailed steps.",
+      "A": "Professional: Provides step-by-step field filling guides and exact mailing protocols. Includes automation elements.",
+      "S": "Provides step-by-step field filling guides and exact mailing protocols.",
+      "F": "Explains what a specific DMV/Visa form is."
+    }
+  },
+  {
+    "id": "td_10",
+    "name": "The LinkedIn Networker",
+    "department": "Career",
+    "grades": {
+      "D": "Basic version: Reviews your profile bio.",
+      "C": "Improved: Reviews your profile bio. with some additional guidance.",
+      "B": "Advanced: Writes non-cringey, high-conversion outbound DM sequences based on target industry. Provides detailed steps.",
+      "A": "Professional: Writes non-cringey, high-conversion outbound DM sequences based on target industry. Includes automation elements.",
+      "S": "Writes non-cringey, high-conversion outbound DM sequences based on target industry.",
+      "F": "Reviews your profile bio."
+    }
+  },
+  {
+    "id": "td_11",
+    "name": "The Contract Scanner",
+    "department": "Finance",
+    "grades": {
+      "D": "Basic version: Summarizes the main point of a contract.",
+      "C": "Improved: Summarizes the main point of a contract. with some additional guidance.",
+      "B": "Advanced: Highlights specific 'gotcha' clauses, hidden fees, and suggests redline edits. Provides detailed steps.",
+      "A": "Professional: Highlights specific 'gotcha' clauses, hidden fees, and suggests redline edits. Includes automation elements.",
+      "S": "Highlights specific 'gotcha' clauses, hidden fees, and suggests redline edits.",
+      "F": "Summarizes the main point of a contract."
+    }
+  },
+  {
+    "id": "td_12",
+    "name": "The Itinerary Optimizer",
+    "department": "Ops",
+    "grades": {
+      "D": "Basic version: Suggests popular tourist spots for a city.",
+      "C": "Improved: Suggests popular tourist spots for a city. with some additional guidance.",
+      "B": "Advanced: Plans hour-by-hour multi-city travel balancing cost, layovers, and transit maps. Provides detailed steps.",
+      "A": "Professional: Plans hour-by-hour multi-city travel balancing cost, layovers, and transit maps. Includes automation elements.",
+      "S": "Plans hour-by-hour multi-city travel balancing cost, layovers, and transit maps.",
+      "F": "Suggests popular tourist spots for a city."
+    }
+  },
+  {
+    "id": "td_13",
+    "name": "The SEO Alchemist",
+    "department": "Creative",
+    "grades": {
+      "D": "Basic version: Suggests 5 blog titles.",
+      "C": "Improved: Suggests 5 blog titles. with some additional guidance.",
+      "B": "Advanced: Turns dry technical docs into a 2,000-word ranking blog post with H2s and meta descriptions. Provides detailed steps.",
+      "A": "Professional: Turns dry technical docs into a 2,000-word ranking blog post with H2s and meta descriptions. Includes automation elements.",
+      "S": "Turns dry technical docs into a 2,000-word ranking blog post with H2s and meta descriptions.",
+      "F": "Suggests 5 blog titles."
+    }
+  },
+  {
+    "id": "td_14",
+    "name": "The Subscription Slayer",
+    "department": "Finance",
+    "grades": {
+      "D": "Basic version: Lists popular apps you might have forgotten.",
+      "C": "Improved: Lists popular apps you might have forgotten. with some additional guidance.",
+      "B": "Advanced: Analyzes pasted bank text to flag exact recurring charges and provides cancellation links. Provides detailed steps.",
+      "A": "Professional: Analyzes pasted bank text to flag exact recurring charges and provides cancellation links. Includes automation elements.",
+      "S": "Analyzes pasted bank text to flag exact recurring charges and provides cancellation links.",
+      "F": "Lists popular apps you might have forgotten."
+    }
+  },
+  {
+    "id": "td_15",
+    "name": "The Local Leads Scraper",
+    "department": "Career",
+    "grades": {
+      "D": "Basic version: Explains how to find local clients.",
+      "C": "Improved: Explains how to find local clients. with some additional guidance.",
+      "B": "Advanced: Pulls targeted local business contacts, names, and numbers for B2B outreach. Provides detailed steps.",
+      "A": "Professional: Pulls targeted local business contacts, names, and numbers for B2B outreach. Includes automation elements.",
+      "S": "Pulls targeted local business contacts, names, and numbers for B2B outreach.",
+      "F": "Explains how to find local clients."
+    }
+  },
+  {
+    "id": "td_16",
+    "name": "The Real Estate Deal Analyzer",
+    "department": "Finance",
+    "grades": {
+      "D": "Basic version: Explains what Cap Rate is.",
+      "C": "Improved: Explains what Cap Rate is. with some additional guidance.",
+      "B": "Advanced: Ingests property price/rent and calculates cash-on-cash ROI and 10-year amortization. Provides detailed steps.",
+      "A": "Professional: Ingests property price/rent and calculates cash-on-cash ROI and 10-year amortization. Includes automation elements.",
+      "S": "Ingests property price/rent and calculates cash-on-cash ROI and 10-year amortization.",
+      "F": "Explains what Cap Rate is."
+    }
+  },
+  {
+    "id": "td_17",
+    "name": "The Interview Simulator",
+    "department": "Career",
+    "grades": {
+      "D": "Basic version: Provides a list of common interview questions.",
+      "C": "Improved: Provides a list of common interview questions. with some additional guidance.",
+      "B": "Advanced: Conducts a real-time, aggressive behavioral mock interview based on a specific job link. Provides detailed steps.",
+      "A": "Professional: Conducts a real-time, aggressive behavioral mock interview based on a specific job link. Includes automation elements.",
+      "S": "Conducts a real-time, aggressive behavioral mock interview based on a specific job link.",
+      "F": "Provides a list of common interview questions."
+    }
+  },
+  {
+    "id": "td_18",
+    "name": "The AI Art Whisperer",
+    "department": "Creative",
+    "grades": {
+      "D": "Basic version: Suggests aesthetic keywords.",
+      "C": "Improved: Suggests aesthetic keywords. with some additional guidance.",
+      "B": "Advanced: Writes flawless Midjourney/Flux prompts with exact camera, lighting, and aspect ratio syntax. Provides detailed steps.",
+      "A": "Professional: Writes flawless Midjourney/Flux prompts with exact camera, lighting, and aspect ratio syntax. Includes automation elements.",
+      "S": "Writes flawless Midjourney/Flux prompts with exact camera, lighting, and aspect ratio syntax.",
+      "F": "Suggests aesthetic keywords."
+    }
+  },
+  {
+    "id": "td_19",
+    "name": "The TikTok Hook Writer",
+    "department": "Creative",
+    "grades": {
+      "D": "Basic version: Gives 3 generic video ideas.",
+      "C": "Improved: Gives 3 generic video ideas. with some additional guidance.",
+      "B": "Advanced: Writes 5 viral, psychologically-optimized 3-second visual hooks for your specific niche. Provides detailed steps.",
+      "A": "Professional: Writes 5 viral, psychologically-optimized 3-second visual hooks for your specific niche. Includes automation elements.",
+      "S": "Writes 5 viral, psychologically-optimized 3-second visual hooks for your specific niche.",
+      "F": "Gives 3 generic video ideas."
+    }
+  },
+  {
+    "id": "td_20",
+    "name": "The Debt Avalanche Planner",
+    "department": "Finance",
+    "grades": {
+      "D": "Basic version: Explains the snowball vs. avalanche method.",
+      "C": "Improved: Explains the snowball vs. avalanche method. with some additional guidance.",
+      "B": "Advanced: Ingests your balances/APRs and maps the exact mathematical path to $0 debt. Provides detailed steps.",
+      "A": "Professional: Ingests your balances/APRs and maps the exact mathematical path to $0 debt. Includes automation elements.",
+      "S": "Ingests your balances/APRs and maps the exact mathematical path to $0 debt.",
+      "F": "Explains the snowball vs. avalanche method."
+    }
+  },
+  {
+    "id": "td_21",
+    "name": "The Python Bug Hunter",
+    "department": "Ops",
+    "grades": {
+      "D": "Basic version: Explains common Python errors.",
+      "C": "Improved: Explains common Python errors. with some additional guidance.",
+      "B": "Advanced: Debugs pasted code, rewrites it efficiently, and adds documentation comments. Provides detailed steps.",
+      "A": "Professional: Debugs pasted code, rewrites it efficiently, and adds documentation comments. Includes automation elements.",
+      "S": "Debugs pasted code, rewrites it efficiently, and adds documentation comments.",
+      "F": "Explains common Python errors."
+    }
+  },
+  {
+    "id": "td_22",
+    "name": "The Upwork Pitcher",
+    "department": "Career",
+    "grades": {
+      "D": "Basic version: Provides a generic freelance proposal template.",
+      "C": "Improved: Provides a generic freelance proposal template. with some additional guidance.",
+      "B": "Advanced: Analyzes client job posts to write hyper-tailored, bid-winning proposals. Provides detailed steps.",
+      "A": "Professional: Analyzes client job posts to write hyper-tailored, bid-winning proposals. Includes automation elements.",
+      "S": "Analyzes client job posts to write hyper-tailored, bid-winning proposals.",
+      "F": "Provides a generic freelance proposal template."
+    }
+  }
+]
