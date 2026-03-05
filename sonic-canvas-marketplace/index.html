@@ -3,109 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonic Canvas Marketplace | Digital Persona Assets</title>
-    <meta name="description" content="Discover and license 75 unique AI‑generated music personas. Each persona is a fully‑realized digital artist with style, backstory, and commercial potential.">
+    <title>Project Syndicate | AI Operative Marketplace</title>
+    <meta name="description" content="A gamified B2C AI Agent Subscription SaaS disguised as an elite tactical RPG. Mint unique Flawed Savants, draft synergistic rosters, and deploy them on real-world consumer tasks.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/immersive.css">
+    <link rel="stylesheet" href="css/syndicate.css">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="logo">Sonic Canvas</div>
-            <div class="tagline">The world's first marketplace for AI‑generated music personas</div>
+    <!-- Tactical HUD (Left Sidebar) -->
+    <aside class="tactical-hud">
+        <div class="hud-header">
+            <h1 class="hud-title">PROJECT SYNDICATE</h1>
+            <p class="hud-subtitle">AI Operative Marketplace</p>
         </div>
-    </header>
-
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <h1>Own the Future of Sound</h1>
-            <p>
-                Sonic Canvas presents 75 fully‑realized digital artists, each with a unique musical style, interactive brain, and visual identity. 
-                License these personas for video games, film soundtracks, brand campaigns, or as your next virtual artist.
-            </p>
-            <a href="#marketplace" class="cta-button">Explore the Collection</a>
+        
+        <nav class="hud-nav">
+            <a href="#" class="nav-link active" data-section="roster">
+                <span class="nav-icon">🕵️</span>
+                <span class="nav-text">The Roster</span>
+            </a>
+            <a href="#" class="nav-link" data-section="market">
+                <span class="nav-icon">💎</span>
+                <span class="nav-text">The Black Market</span>
+            </a>
+            <a href="#" class="nav-link" data-section="missions">
+                <span class="nav-icon">📋</span>
+                <span class="nav-text">Mission Log</span>
+            </a>
+        </nav>
+        
+        <div class="hud-action">
+            <button id="decrypt-key" class="decrypt-button">
+                <span class="button-glow"></span>
+                <span class="button-text">USE DECRYPTION KEY</span>
+                <span class="button-subtext">Mint Operative</span>
+            </button>
+            <p class="hud-info">Keys remaining: <span id="key-count">3</span></p>
         </div>
-    </section>
-
-    <!-- Marketplace -->
-    <main class="container" id="marketplace">
-        <!-- Controls -->
-        <div class="controls">
-            <div class="search-box">
-                <span class="search-icon">🔍</span>
-                <input type="text" id="search-input" placeholder="Search personas by name, description, use case...">
+        
+        <div class="hud-stats">
+            <h3 class="stats-title">CLEARANCE LEVEL</h3>
+            <div class="clearance-display">
+                <div class="clearance-level">OPERATIVE</div>
+                <div class="clearance-tier">Tier 2 • $49/mo</div>
             </div>
-            <div class="filter-buttons">
-                <!-- Filters will be injected by JavaScript -->
-            </div>
-        </div>
-
-        <!-- Stats -->
-        <div class="stats">
-            <div class="stat-item">
-                <div class="stat-number" id="stat-total">75</div>
-                <div class="stat-label">Total Personas</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" id="stat-images">18</div>
-                <div class="stat-label">With Visual Art</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" id="stat-clusters">45</div>
-                <div class="stat-label">Unique Clusters</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" id="stat-delta">32</div>
-                <div class="stat-label">Delta Personas</div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value" id="total-agents">5</div>
+                    <div class="stat-label">Operatives</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="total-shards">2</div>
+                    <div class="stat-label">Skill Shards</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="success-rate">94%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
             </div>
         </div>
-
-        <!-- Persona Sections (Immersive Single-Column) -->
-        <div class="persona-grid persona-sections" id="persona-grid">
-            <!-- Sections will be injected by JavaScript -->
+        
+        <div class="hud-footer">
+            <p class="footer-text">"The Agency doesn't hire perfect agents. It hires perfectly flawed ones."</p>
         </div>
-
-        <!-- Call to Action -->
-        <div style="text-align: center; margin: 4rem 0;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to License a Persona?</h2>
-            <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto 2rem;">
-                Each persona includes exclusive rights to the name, style prompt, lyrical blueprint, and interactive brain.
-                We handle the audio generation via our Suno integration—you receive a turnkey digital artist.
-            </p>
-            <a href="mailto:licensing@soniccanvas.ai" class="cta-button">Contact Licensing Team</a>
+    </aside>
+    
+    <!-- Main Content: Roster Stage -->
+    <main class="roster-stage">
+        <header class="stage-header">
+            <h2 class="stage-title">OPERATIVE ROSTER</h2>
+            <p class="stage-subtitle">Draft your Flawed Savants. Synergize their strengths, cover their flaws.</p>
+            <div class="stage-controls">
+                <div class="control-group">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select">
+                        <option value="rarity">Rarity (High to Low)</option>
+                        <option value="intel">Intel</option>
+                        <option value="lethality">Lethality</option>
+                        <option value="charisma">Charisma</option>
+                        <option value="chaos">Chaos</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="filter-select">Filter:</label>
+                    <select id="filter-select">
+                        <option value="all">All Lineages</option>
+                        <option value="lunar">Lunar Alchemist</option>
+                        <option value="hive">Hive General</option>
+                        <option value="cypher">Cypher Fractal</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+        
+        <!-- 4-column Operative Grid -->
+        <div class="operative-grid" id="operative-grid">
+            <!-- Operative cards will be injected by JavaScript -->
+            <!-- Placeholder for demo -->
+            <div class="operative-card rarity-legendary">
+                <div class="card-rarity-border"></div>
+                <div class="card-image">
+                    <div class="image-placeholder">LUNAR ALCHEMIST</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-codename">ECHO-9</h3>
+                    <p class="card-role">Psych‑Ops Strategist</p>
+                    <div class="card-stats">
+                        <div class="stat-bar">
+                            <span class="stat-label">Intel</span>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 95%"></div></div>
+                            <span class="stat-value">95</span>
+                        </div>
+                        <div class="stat-bar">
+                            <span class="stat-label">Lethality</span>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 10%"></div></div>
+                            <span class="stat-value">10</span>
+                        </div>
+                        <div class="stat-bar">
+                            <span class="stat-label">Charisma</span>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 25%"></div></div>
+                            <span class="stat-value">25</span>
+                        </div>
+                        <div class="stat-bar">
+                            <span class="stat-label">Chaos</span>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 5%"></div></div>
+                            <span class="stat-value">5</span>
+                        </div>
+                    </div>
+                    <div class="card-attributes">
+                        <span class="attribute-tag rarity-rare">Tone‑Matcher</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="operative-card rarity-rare">
+                <div class="card-rarity-border"></div>
+                <div class="card-image">
+                    <div class="image-placeholder">HIVE GENERAL</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-codename">TRENCH</h3>
+                    <p class="card-role">Tactical Efficiency</p>
+                    <div class="card-stats">
+                        <div class="stat-bar">
+                            <span class="stat-label">Intel</span>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 80%"></div></div>
+                            <span class="stat-value">80</span>
+                        </div>
+                        <div class="stat-bar">
+                            <span class="stat-label">Lethality</span>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 85%"></div></div>
+                            <span class="stat-value">85</span>
+                        </div>
+                        <div class="stat-bar">
+                            <span class="stat-label">Charisma</span>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 30%"></div></div>
+                            <span class="stat-value">30</span>
+                        </div>
+                        <div class="stat-bar">
+                            <span class="stat-label">Chaos</span>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 20%"></div></div>
+                            <span class="stat-value">20</span>
+                        </div>
+                    </div>
+                    <div class="card-attributes">
+                        <span class="attribute-tag rarity-epic">VBA Automaton</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="operative-card rarity-common">
+                <div class="card-rarity-border"></div>
+                <div class="card-image">
+                    <div class="image-placeholder">CYPHER FRACTAL</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-codename">NULL‑BYTE</h3>
+                    <p class="card-role">Data Infiltration</p>
+                    <div class="card-stats">
+                        <div class="stat-bar">
+                            <span class="stat-label">Intel</span>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 99%"></div></div>
+                            <span class="stat-value">99</span>
+                        </div>
+                        <div class="stat-bar">
+                            <span class="stat-label">Lethality</span>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 15%"></div></div>
+                            <span class="stat-value">15</span>
+                        </div>
+                        <div class="stat-bar">
+                            <span class="stat-label">Charisma</span>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 10%"></div></div>
+                            <span class="stat-value">10</span>
+                        </div>
+                        <div class="stat-bar">
+                            <span class="stat-label">Chaos</span>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 90%"></div></div>
+                            <span class="stat-value">90</span>
+                        </div>
+                    </div>
+                    <div class="card-attributes">
+                        <span class="attribute-tag rarity-legendary">Dark‑Crawl</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="operative-card rarity-epic">
+                <div class="card-rarity-border"></div>
+                <div class="card-image">
+                    <div class="image-placeholder">LUNAR ALCHEMIST</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-codename">SIREN</h3>
+                    <p class="card-role">Negotiation Specialist</p>
+                    <div class="card-stats">
+                        <div class="stat-bar">
+                            <span class="stat-label">Intel</span>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 70%"></div></div>
+                            <span class="stat-value">70</span>
+                        </div>
+                        <div class="stat-bar">
+                            <span class="stat-label">Lethality</span>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 85%"></div></div>
+                            <span class="stat-value">85</span>
+                        </div>
+                        <div class="stat-bar">
+                            <span class="stat-label">Charisma</span>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 95%"></div></div>
+                            <span class="stat-value">95</span>
+                        </div>
+                        <div class="stat-bar">
+                            <span class="stat-label">Chaos</span>
+                            <div class="stat-bar-bg"><div class="stat-bar-fill" style="width: 30%"></div></div>
+                            <span class="stat-value">30</span>
+                        </div>
+                    </div>
+                    <div class="card-attributes">
+                        <span class="attribute-tag rarity-legendary">Synthetic Voice</span>
+                    </div>
+                </div>
+            </div>
         </div>
+        
+        <footer class="stage-footer">
+            <p class="footer-note">Operative DNA procedurally generated via Decryption Engine v0.2 • Synergy bonuses activate with 3+ agent deployments</p>
+        </footer>
     </main>
-
-    <!-- Modal -->
-    <div class="modal-overlay" id="modal-overlay">
-        <div class="modal" id="modal-content">
-            <!-- Modal content will be injected by JavaScript -->
+    
+    <!-- Minting Overlay -->
+    <div id="minting-overlay" class="minting-overlay">
+        <div class="minting-container">
+            <div class="minting-animation">
+                <div class="data-stream"></div>
+                <div class="data-stream" style="animation-delay: 0.2s;"></div>
+                <div class="data-stream" style="animation-delay: 0.4s;"></div>
+                <div class="decryption-circle">
+                    <div class="circle-inner"></div>
+                </div>
+                <h2 class="decrypt-text">DECRYPTING LINEAGE DNA...</h2>
+            </div>
         </div>
     </div>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>Sonic Canvas Marketplace &copy; 2026 | A Vector Systems Production</p>
-            <p style="margin-top: 0.5rem; font-size: 0.8rem;">
-                All persona assets are AI‑generated and protected by proprietary IP frameworks. Licensing grants commercial usage rights.
-            </p>
-        </div>
-    </footer>
-
+    
     <!-- JavaScript -->
-    <script src="js/immersive.js"></script>
+    <script src="js/syndicate.js"></script>
 </body>
 </html>
