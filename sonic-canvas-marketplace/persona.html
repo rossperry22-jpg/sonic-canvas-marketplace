@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonic Canvas Persona | Digital Artist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/immersive.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <style>
+        .persona-detail {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        .persona-detail-header {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        .persona-detail-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            aspect-ratio: 1 / 1;
+            background: var(--bg-card);
+        }
+        .persona-detail-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .persona-detail-info h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+        .persona-detail-info .imprint {
+            font-size: 1.2rem;
+            color: var(--accent-secondary);
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+        .persona-detail-info .description {
+            font-size: 1.3rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+        }
+        .persona-detail-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        .detail-section {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+        }
+        .detail-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-primary);
+        }
+        .detail-section p, .detail-section ul {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .detail-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .detail-section li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .detail-section li:last-child {
+            border-bottom: none;
+        }
+        .lyrics-section {
+            background: var(--bg-secondary);
+            white-space: pre-line;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            padding: 2rem;
+            border-radius: var(--radius);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .loading {
+            text-align: center;
+            padding: 4rem;
+            font-size: 1.5rem;
+            color: var(--text-muted);
+        }
+        .error {
+            color: var(--danger);
+            text-align: center;
+            padding: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">Sonic Canvas</div>
+            <div class="tagline">The world's first marketplace for AI‑generated music personas</div>
+        </div>
+    </header>
+
+    <!-- Persona Detail -->
+    <main class="persona-detail">
+        <a href="index.html" class="back-link">← Back to Marketplace</a>
+        <div id="persona-detail-content">
+            <div class="loading">Loading persona...</div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Sonic Canvas Marketplace &copy; 2026 | A Vector Systems Production</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+                All persona assets are AI‑generated and protected by proprietary IP frameworks. Licensing grants commercial usage rights.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        async function loadPersona() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = parseInt(urlParams.get('id'));
+            if (isNaN(id)) {
+                document.getElementById('persona-detail-content').innerHTML = '<div class="error">Invalid persona ID.</div>';
+                return;
+            }
+            
+            try {
+                const response = await fetch('data/personas.json');
+                const personas = await response.json();
+                const persona = personas.find(p => p.id === id);
+                if (!persona) {
+                    document.getElementById('persona-detail-content').innerHTML = '<div class="error">Persona not found.</div>';
+                    return;
+                }
+                
+                const imageUrl = persona.image ? `assets/images/${persona.image}` : '';
+                const placeholderStyle = persona.image ? '' : `background: ${persona.color};`;
+                
+                document.getElementById('persona-detail-content').innerHTML = `
+                    <div class="persona-detail-header">
+                        <div class="persona-detail-image">
+                            ${imageUrl ? `<img src="${imageUrl}" alt="${persona.name}">` : `<div style="${placeholderStyle} height: 100%; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: white;">${persona.name.charAt(0)}</div>`}
+                        </div>
+                        <div class="persona-detail-info">
+                            <h1>${persona.name}</h1>
+                            <div class="imprint">${persona.imprint}</div>
+                            <p class="description">${persona.description}</p>
+                            <a href="mailto:licensing@soniccanvas.ai" class="cta-button">License This Persona</a>
+                        </div>
+                    </div>
+                    <div class="persona-detail-sections">
+                        <div class="detail-section">
+                            <h3>Musical Style</h3>
+                            <p>${persona.style}</p>
+                        </div>
+                        <div class="detail-section">
+                            <h3>Interactive Brain</h3>
+                            <p>${persona.bio}</p>
+                        </div>
+                        <div class="detail-section">
+                            <h3>Visual Identity</h3>
+                            <p>${persona.visual_identity}</p>
+                        </div>
+                    </div>
+                    <div class="persona-detail-sections">
+                        <div class="detail-section">
+                            <h3>Use Cases</h3>
+                            <ul>
+                                ${persona.use_cases.map(uc => `<li>${uc}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="detail-section">
+                            <h3>Cluster</h3>
+                            <p>Cluster ${persona.cluster_id} ${persona.delta ? '(Delta Persona)' : ''}</p>
+                        </div>
+                    </div>
+                    ${persona.lyrics ? `
+                    <div class="detail-section">
+                        <h3>Lyrical Blueprint</h3>
+                        <div class="lyrics-section">${persona.lyrics}</div>
+                    </div>
+                    ` : ''}
+                `;
+            } catch (error) {
+                console.error('Failed to load persona:', error);
+                document.getElementById('persona-detail-content').innerHTML = '<div class="error">Failed to load persona data.</div>';
+            }
+        }
+        
+        loadPersona();
+    </script>
+</body>
+</html>
