@@ -3,103 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaskDraft | The Apex Alpha Build</title>
-    <meta name="description" content="Draft Flawed Savant AI agents to automate high‑friction daily tasks. A premium Fintech‑meets‑TCG experience.">
+    <title>Project Syndicate | Secure Terminal</title>
+    <meta name="description" content="Exclusive access to high-tier automated operatives.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="css/taskdraft.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="css/syndicate.css">
 </head>
 <body>
-    <header>
-        <h1>TASKDRAFT</h1>
-        <p class="subtitle">The Apex Alpha Build · B2C Gamified Productivity Platform</p>
-        
-        <div class="controls">
-            <button id="draftBtn" class="btn btn-primary">DRAFT NEW AGENT (1 Compute Credit)</button>
-            <button class="btn btn-secondary" onclick="window.open('https://github.com/rossperry22-jpg/sonic-canvas-marketplace', '_blank')">VIEW GITHUB REPO</button>
-        </div>
-        
-        <div class="stats">
-            <div class="stat-item">
-                <span class="stat-label">Compute Credits:</span>
-                <span id="computeCredits" class="stat-value">3</span>
+    <div class="terminal-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-logo"></div>
+                <h2>SYNDICATE</h2>
+                <p class="clearance">CLEARANCE: OMEGA</p>
             </div>
-            <div class="stat-item">
-                <span class="stat-label">Subscription:</span>
-                <span id="subscriptionStatus" class="stat-value">NO SUBSCRIPTION</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-label">Agents Drafted:</span>
-                <span id="agentsDrafted" class="stat-value">0</span>
-            </div>
-        </div>
-    </header>
-    
-    <main>
-        <section class="roster-section">
-            <h2>Your Operative Roster</h2>
-            <p class="section-subtitle">Deploy any agent to automate real‑world tasks. Requires active subscription.</p>
             
-            <div id="rosterStage" class="roster-stage">
-                <!-- Agent cards will be injected here by JavaScript -->
-                <div class="empty-state">
-                    <p>No agents drafted yet. Click "DRAFT NEW AGENT" to begin.</p>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">▤</span>
+                    <span class="nav-text">Active Roster</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">◈</span>
+                    <span class="nav-text">Acquisition Network</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">◒</span>
+                    <span class="nav-text">Financial Analytics</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button id="mintAgentBtn" class="btn-primary">
+                    <span class="btn-text">RECRUIT OPERATIVE</span>
+                    <span class="btn-cost">1.5k CREDITS</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="workspace">
+            <header class="workspace-header">
+                <div>
+                    <h1>OPERATIVE DEPLOYMENT</h1>
+                    <p class="subtitle">Select an agent to initiate a secure uplink.</p>
                 </div>
-            </div>
-        </section>
-    </main>
-    
-    <!-- GACHA ANIMATION OVERLAY -->
-    <div id="gachaOverlay" class="gacha-overlay">
-        <div class="dossier-icon">
-            <div class="laser"></div>
-            ENCRYPTED DOSSIER
-        </div>
-        <h3>Decrypting Neural Blueprint...</h3>
-        <p>Your new Flawed Savant is being drafted.</p>
-    </div>
-    
-    <!-- DEPLOY MODAL -->
-    <div id="deployModal" class="modal">
-        <div class="modal-content">
-            <h2>DEPLOY OPERATIVE</h2>
-            <p>You're about to deploy <strong id="modalAgentName">The Resume Hacker</strong>.</p>
-            <p>This action requires an active subscription.</p>
-            
-            <div class="pricing-tier">
-                <div class="tier-header">
-                    <div class="tier-name">Starter Tier</div>
-                    <div class="tier-price">$15<span>/month</span></div>
+                <div class="status-indicators">
+                    <div class="indicator"><span class="dot pulse-green"></span> SECURE CONNECTION</div>
+                    <div class="indicator"><span class="dot"></span> 3 ACTIVE</div>
                 </div>
-                <ul class="tier-features">
-                    <li>10 Compute Credits per month</li>
-                    <li>Unlimited agent deployment</li>
-                    <li>Priority neural‑link queue</li>
-                    <li>Basic analytics dashboard</li>
-                </ul>
+            </header>
+
+            <div class="roster-grid" id="rosterGrid">
+                <!-- Operative Cards injected via JS -->
+            </div>
+        </main>
+
+        <!-- Secure Uplink Interface (Chat/Deploy) -->
+        <aside class="uplink-panel" id="uplinkPanel">
+            <div class="uplink-header">
+                <div class="uplink-status">SECURE UPLINK ESTABLISHED</div>
+                <button class="close-btn" id="closeUplink">×</button>
             </div>
             
-            <div class="modal-buttons">
-                <button class="btn btn-secondary close-modal">CANCEL</button>
-                <button id="simulatePaymentBtn" class="btn btn-primary">SIMULATE PAYMENT & ACTIVATE</button>
+            <div class="agent-profile" id="activeAgentProfile">
+                <!-- Injected via JS -->
             </div>
+
+            <div class="chat-interface" id="chatLog">
+                <div class="chat-message system-msg">
+                    Connection secured. End-to-end encryption active.
+                </div>
+                <!-- Chat messages injected via JS -->
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" placeholder="Assign task or relay intelligence..." class="chat-input" disabled>
+                <button class="btn-send" disabled>SEND</button>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Decryption Overlay -->
+    <div id="decryptionOverlay" class="decryption-overlay hidden">
+        <div class="decryption-box">
+            <div class="spinner"></div>
+            <h2 class="glitch" data-text="DECRYPTING DOSSIER">DECRYPTING DOSSIER</h2>
+            <p class="terminal-text" id="decryptionLog">Establishing secure handshake...</p>
         </div>
     </div>
-    
-    <!-- JavaScript -->
-    <script src="js/taskdraft.js"></script>
-    
-    <footer>
-        <p>TaskDraft Alpha Build v1.0 · Deployed via GitHub Pages · © 2026 Ross Chandler</p>
-        <p class="footer-note">This is a prototype. All agent capabilities are simulated for demonstration.</p>
-    </footer>
+
+    <script src="js/syndicate.js"></script>
 </body>
 </html>
